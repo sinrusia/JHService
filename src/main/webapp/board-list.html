@@ -1,0 +1,46 @@
+
+<button ng-click="create()">insert</button>
+<ul>
+	<li ng-repeat="board in boards">{{board.title}} {{board.id}}
+		<button ng-click="update(board)">Update</button>
+		<button ng-click="delete(board.id)">Delete</button>
+	</li>
+</ul>
+
+
+<table class="table table-striped">
+	<col width="50" />
+	<col width="40" />
+	<col />
+	<col width="110" />
+	<col width="50" />
+	<col width="50" />
+	<col width="40" />
+	<col width="40" />
+	<tr>
+		<th class="">number</th>
+		<th class=""><input
+			onclick="if (this.checked) all_checked(true); else all_checked(false);"
+			type="checkbox"></th>
+		<th style="text-align: center">Board TITLE</th>
+		<th>author</th>
+		<th>date</th>
+		<th>count</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<tr class="" ng-repeat="board in boards">
+		<td class=""></td>
+		<td class=""><input type="checkbox" name="chk_wr_id[]"
+			value="<?=$list[$i][wr_id]?>"></td>
+		<td class=""></td>
+		<td class="name"><a href="#/boards/{{board.id}}">{{board.title}}</a>
+		</td>
+		<td class="datetime"></td>
+		<td class="hit"></td>
+		<td class="good"></td>
+		<td class="nogood"></td>
+	</tr>
+
+</table>
